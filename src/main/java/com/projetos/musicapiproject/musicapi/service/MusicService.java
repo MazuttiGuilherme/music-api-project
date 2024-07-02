@@ -9,7 +9,6 @@ import java.util.Optional;
 
 public class MusicService {
 
-    @Autowired
     private MusicRepository musicRepository;
 
     public List<Music> getAllMusic(){
