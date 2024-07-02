@@ -8,6 +8,8 @@ import jakarta.persistence.Id;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -18,6 +20,6 @@ public class Music {
     private String title;
     private String artist;
     private String album;
-    private int year;
+    private Date releaseYear;
 
 }

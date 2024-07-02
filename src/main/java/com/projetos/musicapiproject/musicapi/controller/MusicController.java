@@ -54,7 +54,7 @@ public class MusicController {
             updatedMusic.setTitle(musicDetails.getTitle());
             updatedMusic.setArtist(musicDetails.getArtist());
             updatedMusic.setAlbum(musicDetails.getAlbum());
-            updatedMusic.setYear(musicDetails.getYear());
+            updatedMusic.setReleaseYear(musicDetails.getReleaseYear());
             musicService.saveMusic(updatedMusic);
         } else {
             return ResponseEntity.notFound().build();
