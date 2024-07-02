@@ -20,7 +20,6 @@ import java.util.Optional;
 @Tag(name = "Music", description = "API para gerenciar músicas")
 public class MusicController {
 
-
     private MusicService musicService;
 
     @GetMapping
