@@ -13,6 +13,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
+
 import static org.springframework.security.config.Customizer.withDefaults;
 
 @Configuration
@@ -28,6 +29,7 @@ public class SecurityConfig {
                         .requestMatchers(HttpMethod.POST, "/api/music/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.PUT, "/api/music/**").hasRole("ADMIN")
                         .requestMatchers(HttpMethod.DELETE, "/api/music/**").hasRole("ADMIN")
+                        .requestMatchers("/css/**", "/js/**", "/images/**").permitAll()
                         .anyRequest().authenticated()
                 )
                 .formLogin(withDefaults());
