@@ -2,7 +2,6 @@ package com.projetos.musicapiproject.musicapi.service;
 
 import com.projetos.musicapiproject.musicapi.model.Music;
 import com.projetos.musicapiproject.musicapi.repository.MusicRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
 import java.util.Optional;
@@ -26,6 +25,5 @@ public class MusicService {
     public void deleteMusic(Long id) {
         musicRepository.deleteById(id);
     }
-
 
 }
